@@ -31,6 +31,9 @@ class Save:
         self.dont_save_button_animation = ButtonAnimation(self.dont_save_button, 100, 300)
         self.cancel_button_animation = ButtonAnimation(self.cancel_button, 100, 400)
 
+        # Enable key repeat
+        pygame.key.set_repeat(500, 50)
+
     def run(self):
         while not self.done:
             self.clock.tick(self.game.fps)
