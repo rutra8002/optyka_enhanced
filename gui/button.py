@@ -365,6 +365,19 @@ class ButtonForgame:
             self.x = (self.screen.width // 2) + gap
             self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
 
+        elif self.number == 101:
+            self.text = self.font.render('Save', True, 'black')
+            self.y = (self.screen.height)
+            self.x = (self.screen.width // 2) + gap
+        elif self.number == 102:
+            self.text = self.font.render('Don\'t Save', True, 'black')
+            self.y = (self.screen.height)
+            self.x = (self.screen.width // 2) + gap
+        elif self.number == 103:
+            self.text = self.font.render('Cancel', True, 'black')
+            self.y = (self.screen.height)
+            self.x = (self.screen.width // 2) + gap
+
         else:
             self.text = self.font.render('@', True, 'black')
 
@@ -418,6 +431,12 @@ class ButtonForgame:
             elif self.number == 75:
                 self.screen.game.mode = 'delete'
                 self.screen.mixer.clicked_sound()
+            elif self.number == 101:
+                self.screen.save()
+            elif self.number == 102:
+                self.screen.done = True
+            elif self.number == 103:
+                self.screen.cancel()
             else:
                 raise NotImplementedError('button function not yet added')
 
