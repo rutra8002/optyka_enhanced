@@ -20,7 +20,7 @@ import functions
 import gui
 from gui.polygonDrawing import polygonDrawing
 from classes import popup
-from classes import saveTK, mixer_c
+from classes import savenotTK, mixer_c
 from classes import Camera
 
 isDrawingModeOn = False
@@ -702,30 +702,33 @@ class Game:
             self.generate_save()
             print(len(self.objects))
             if len(self.objects) > 2:
-
-                if self.save_title != None:
+                if self.save_title is not None:
                     prev_save_data = settingsSetup.load_settings(f'saves/{self.save_title}.json')
                     if len(prev_save_data) > 1:
                         if prev_save_data[1:] != self.save_obj[1:]:
                             pygame.mouse.set_visible(True)
-                            a = saveTK.Save(self)
+                            a = savenotTK.Save(self)
+                            a.run()  # Call the run method to open the save dialog
                     else:
                         pygame.mouse.set_visible(True)
-                        a = saveTK.Save(self)
+                        a = savenotTK.Save(self)
+                        a.run()  # Call the run method to open the save dialog
                 else:
                     pygame.mouse.set_visible(True)
-                    a = saveTK.Save(self)
-
-            elif len(self.objects) == 2 and self.save_title != None:
+                    a = savenotTK.Save(self)
+                    a.run()  # Call the run method to open the save dialog
+            elif len(self.objects) == 2 and self.save_title is not None:
                 prev_save_data = settingsSetup.load_settings(f'saves/{self.save_title}.json')
                 if len(prev_save_data) != 1:
                     pygame.mouse.set_visible(True)
-                    a = saveTK.Save(self)
+                    a = savenotTK.Save(self)
+                    a.run()  # Call the run method to open the save dialog
             elif len(self.objects) == 2:
                 pass
             else:
                 pygame.mouse.set_visible(True)
-                a = saveTK.Save(self)
+                a = savenotTK.Save(self)
+                a.run()  # Call the run method to open the save dialog
         if self.cancel == False:
             self.run = False
         self.cancel = False
