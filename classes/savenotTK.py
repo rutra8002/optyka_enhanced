@@ -16,7 +16,7 @@ class Save:
         self.color_active = pygame.Color('dodgerblue2')
         self.color = self.color_inactive
         self.active = False
-        self.text = ''
+        self.text = game.save_title if game.save_title else ''
         self.done = False
 
         self.clock = pygame.time.Clock()
