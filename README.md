@@ -25,14 +25,13 @@ Optics enhanced is a fork of [Optics](https://github.com/Hohenzoler/optyka), but
 ## Installation
 There are two ways to install the project: download exe file, or run the project from source.
 
-> [!NOTE]
-> For now the project is only downloadable using second method.
 
-~~### Method 1<br>~~
-~~1. Go to the ***Releases*** page on our project's GitHub<br>~~
-~~2. Download ***v1.0.zip*** or ***v1.0-onefile.zip***<br>~~
-~~3. Extract all the files<br>~~
-~~4. Run ***optics.exe***<br>~~
+
+### Method 1<br>
+1. Go to the ***Releases*** page on our project's GitHub<br>
+2. Download latest version's .zip file
+3. Extract it
+4. Run main.exe
 
 ### Method 2
 1. Clone the repository: `git clone https://github.com/Hohenzoler/optyka.git`
