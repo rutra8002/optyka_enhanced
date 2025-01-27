@@ -57,7 +57,7 @@ class GameObject:
         self.scale_factor = 1
         self.lazer = False
 
-        self.num_rays = 5
+        self.num_rays = 20
         self.fov = 10
         self.half_fov = self.fov /2
         self.deltangle = self.fov/self.num_rays
