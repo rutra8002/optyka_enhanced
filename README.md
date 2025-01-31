@@ -28,7 +28,7 @@ There are two ways to install the project: download exe file, or run the project
 
 
 ### Method 1<br>
-1. Go to the ***Releases*** page on our project's GitHub<br>
+1. Go to the ***Releases*** page<br>
 2. Download latest version's .zip file
 3. Extract it
 4. Run main.exe
