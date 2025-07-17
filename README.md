@@ -34,7 +34,7 @@ There are two ways to install the project: download exe file, or run the project
 4. Run main.exe
 
 ### Method 2
-1. Clone the repository: `git clone https://github.com/Hohenzoler/optyka.git`
+1. Clone the repository: `git clone https://github.com/rutra8002/optyka_enhanced.git`
 2. Navigate to the project directory: `optyka`
 3. Install the required packages: `pip install -r requirements.txt`
 4. Run the main script: `python main.py`
