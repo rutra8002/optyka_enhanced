@@ -42,12 +42,7 @@ def do_lines_intersect(line1_start, line1_end, line2_start, line2_end):
 
     return False  # Doesn't intersect
 def is_linear_function_passing_through_point(linear_function, point):
-    a = linear_function.a
-    b = linear_function.b
-    x_point, y_point = point
-
-    return abs(a * x_point + b - y_point) < 3
-
+    return abs(linear_function.a * point[0] + linear_function.b - point[1]) < 3
 
 
 def calculate_intersection_angle(m1, m2):

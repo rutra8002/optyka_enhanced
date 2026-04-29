@@ -306,6 +306,17 @@ class Light:
         if lens == self.ignore_object:
             self.ignore_object = None
             return
+
+        rect = lens.rect
+        if self.horizontal == 'right' and self.current_starting_point[0] > rect.right:
+            return
+        if self.horizontal == 'left' and self.current_starting_point[0] < rect.left:
+            return
+        if self.vertical == 'down' and self.current_starting_point[1] > rect.bottom:
+            return
+        if self.vertical == 'up' and self.current_starting_point[1] < rect.top:
+            return
+
         for index, point in enumerate(lens.lens_points):
             if functions.is_linear_function_passing_through_point(self.linear_function, point):
                 x = point[0]
