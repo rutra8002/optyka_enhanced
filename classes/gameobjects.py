@@ -547,7 +547,9 @@ class GameObject:
     def change_parameters(self, placeholder=None):
         if placeholder == None:
             self.find_parameters()
-            mp.Parameters(self)
+            if self.game.parameters_overlay is None:
+                mp.Parameters(self)
+            return
 
         # print(self.parameters)
 
@@ -703,7 +705,9 @@ class Prism(GameObject):
     def change_parameters(self, placeholder=None):
         if placeholder == None:
             self.find_parameters()
-            mp.Parameters(self)
+            if self.game.parameters_overlay is None:
+                mp.Parameters(self)
+            return
 
         # print(self.parameters)
 
@@ -1641,7 +1645,9 @@ class Lens(GameObject):
     def change_parameters(self, placeholder=None):
         if placeholder == None:
             self.find_parameters()
-            mp.Parameters(self)
+            if self.game.parameters_overlay is None:
+                mp.Parameters(self)
+            return
 
         # print(self.parameters)
 

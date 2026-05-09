@@ -111,6 +111,8 @@ class Game:
 
         self.smol_font = pygame.font.Font(Font, 20)
 
+        self.parameters_overlay = None
+
         print(self.objects)
 
     # def render_text(self, text, position, color=(255, 255, 255)):
@@ -235,6 +237,10 @@ class Game:
                 if self.cancel == False:
                     pygame.quit()
                     quit()
+
+            if self.parameters_overlay is not None:
+                self.parameters_overlay.handle_event(event)
+                continue
 
             if self.mode == 'default':
                 # if event.type == pygame.KEYDOWN and event.key == pygame.K_UP:
@@ -441,6 +447,9 @@ class Game:
                     self.screen.blit(self.surfaces[surface_num], (0, 0))
 
                 self.surface_rays = {i: [] for i in range(self.surface_num)}
+
+            if self.parameters_overlay is not None:
+                self.parameters_overlay.render()
 
             # if self.isDrawingModeOn:
             #     optyka.gui.polygonDrawing.renderDots()
